@@ -14,7 +14,7 @@ COPY tsconfig.json .
 
 RUN yarn package
 
-FROM amazoncorretto:17 as jar-builder
+FROM amazoncorretto:17.0.6 as jar-builder
 
 # renovate: datasource=github-tags depName=jaoafa/DynmapProcessor
 ENV DYNMAP_PROCESSOR_TAG v1.1.0

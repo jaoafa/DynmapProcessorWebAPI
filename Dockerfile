@@ -1,4 +1,4 @@
-FROM node:18-alpine as web-builder
+FROM node:20-alpine as web-builder
 
 WORKDIR /app
 
@@ -29,7 +29,7 @@ RUN yum install -y git && \
   chmod +x ./gradlew && \
   ./gradlew package
 
-FROM node:18-alpine as runner
+FROM node:20-alpine as runner
 
 # hadolint ignore=DL3018
 RUN apk update && \
